@@ -1,1 +1,33 @@
-<p>subject-form works!</p>
+<!-- subject-form.component.html -->
+<div class="mat-card">
+    <h2 class="mat-h2">CGPA Calculator</h2>
+    <div *ngFor="let subject of subjects; let i = index" class="subject-entry">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Subject Name</mat-label>
+        <input matInput [(ngModel)]="subject.name" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Credit</mat-label>
+        <input matInput type="number" [(ngModel)]="subject.credit" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Obtain GPA</mat-label>
+        <input matInput type="number" [(ngModel)]="subject.obtainGPA" required>
+      </mat-form-field>
+  
+      <button mat-icon-button class="remove-button" (click)="removeSubject(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  
+    <button mat-raised-button color="primary" class="add-button" (click)="addSubject()">Add Subject</button>
+  
+    <button mat-raised-button color="accent" class="calculate-button" (click)="calculateCGPA()">Calculate CGPA</button>
+  
+    <div *ngIf="result" class="result">
+      <h3>Your CGPA: {{ result }}</h3>
+    </div>
+  </div>
+  

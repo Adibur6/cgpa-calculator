@@ -1,0 +1,44 @@
+/* subject-form.component.css */
+/* subject-form.component.css */
+.mat-card {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+  }
+  
+  .subject-entry {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-field {
+    width: 60%; /* Adjust the width as needed */
+    margin-right: 15px;
+  }
+  
+  .remove-button {
+    background-color: #ff5252; /* Red color */
+    color: white;
+  }
+  
+  .add-button {
+    background-color: #2196F3; /* Blue color */
+    color: white;
+  }
+  
+  .calculate-button {
+    background-color: #FFC107; /* Yellow color */
+    color: black;
+  }
+  
+  .result {
+    margin-top: 20px;
+  }
+  
