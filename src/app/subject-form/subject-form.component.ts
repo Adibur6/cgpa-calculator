@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SubjectFormComponent {
   subjects: any[] = [];
-  result: number | null = null;
+  result: string | null = null;
 
   addSubject() {
     this.subjects.push({
@@ -34,7 +34,7 @@ export class SubjectFormComponent {
     if (totalCredits === 0) {
       this.result = null;
     } else {
-      this.result = weightedSum / totalCredits;
+      this.result = (weightedSum / totalCredits).toFixed(2);
     }
   }
 }
